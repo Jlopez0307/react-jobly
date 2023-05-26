@@ -1,0 +1,31 @@
+/* Style for base form fields */
+.LoginForm {
+    background-color: white;
+    width: 50vw;
+    padding: 50px;
+
+    margin: 0 auto;
+    position: relative;
+    top: 5rem;
+    border-radius: 25px;
+}
+
+.LoginForm form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.LoginForm form label{
+    align-self: baseline;
+}
+
+.LoginForm form input{
+    margin-bottom: 20px;
+}
+
+.LoginForm form button{
+    position: relative;
+    top: 20px;
+}

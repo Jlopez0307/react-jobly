@@ -1,0 +1,17 @@
+.Home{
+    position: relative;
+    top: 10rem;
+}
+
+.Home h1 {
+    text-shadow: 2px 2px 2px rgb(187, 187, 187);
+}
+
+.Home p {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px rgb(187, 187, 187);
+}
+
+.Home div.home-btns a {
+   margin: 10px;
+}

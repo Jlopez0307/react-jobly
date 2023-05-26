@@ -1,19 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
+import '../styles/Nav.css'
+import { Nav ,NavItem, NavLink, NavbarBrand } from 'reactstrap';
 
-const Nav = () => {
+const NavBar = ({ logout, user }) => {
+
+    const handleLogout = () => {
+        logout();
+    }
+
     return (
         <div className="Nav">
-            <ul>
-                <Link to="/">Jobly</Link>
-                <Link to="/login">Login</Link>
-                <Link to="/signup">SignUp</Link>
-                <Link to="/profile">Profile</Link>
-                <Link to="/companies">Companies</Link>
-                <Link to="/jobs">Jobs</Link>
-            </ul>
+            
+            {user 
+            
+            ? 
+                <Nav fill pills>
+                    <NavItem className="homeLink">
+                        <NavLink href="/">Jobly</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/companies">Companies</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/jobs">Jobs</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/profile">Profile</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/" onClick={handleLogout}>Logout</NavLink>
+                    </NavItem>
+
+                </Nav>
+            :
+
+                <Nav fill pills>
+                
+                    <NavItem>
+                        <NavLink href="/">Jobly</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/login">Login</NavLink>
+                    </NavItem>
+
+                    <NavItem>
+                        <NavLink href="/signup">Sign Up</NavLink>
+                    </NavItem>
+
+                </Nav>
+            }
         </div>
     )
 };
 
-export default Nav;
+export default NavBar;

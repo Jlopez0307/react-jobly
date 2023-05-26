@@ -1,0 +1,20 @@
+.JobDetails{
+    position: relative;
+    top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    width: 50vw;
+}
+
+.JobDetails div.card {
+    
+    width: 80%;
+}
+
+.JobDetails div.card div.card-body button{
+    
+    background-color: red;
+}

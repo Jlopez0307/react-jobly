@@ -41,19 +41,69 @@ class JoblyApi {
   static async getCompany(handle) {
     let res = await this.request(`companies/${handle}`);
     return res.company;
-  }
+  };
+
+  static async searchCompany(query) {
+    let res = await this.request(`companies/?name=${query}`);
+    return res;
+  };
+
+
 
   // obviously, you'll add a lot here ...
+
+  /** Get details on all companies */
   static async getAllCompanies() {
     let res = await this.request(`companies`);
-    return res.companies
+    return res.companies;
+  };
+
+  /**Gets details on all jobs */
+  static async getAllJobs() {
+    let res = await this.request(`jobs`);
+    return res.jobs;
+  };
+
+  /**Gets details on a job based on id */
+  static async getJob(id) {
+    let res = await this.request(`jobs/${id}`);
+    return res;
+  };
+
+  static async searchJob(query){
+    let res = await this.request(`jobs/?title=${query}`)
+    return res;
   }
 
-}
+  //Login a user
+  static async login(username, password){
+    const res = await JoblyApi.request("auth/token", {username: username, password: password}, "post");
+    return res;
+  };
+
+  //Gets user based on username
+  static async getUser(username){
+    let res = await this.request(`users/${username}`);
+    return res;
+  };
+
+  //Updates a user based on username
+  static async updateUser(username, data, method){
+    let res = await this.request(`users/${username}`, data, method);
+    return res;
+  };
+
+  static async userJobApplication( username, jobId ) {
+    let res = await this.request(`users/${username}/jobs/${jobId}`, undefined, "post");
+    return res;
+  };
+
+
+};
 
 // for now, put token ("testuser" / "password" on class)
-JoblyApi.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ" +
-    "SI6InRlc3R1c2VyIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTU5ODE1OTI1OX0." +
-    "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
+// JoblyApi.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZ" +
+//     "SI6InRlc3R1c2VyIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTU5ODE1OTI1OX0." +
+//     "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
 
 export default JoblyApi;

@@ -1,11 +1,20 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import {Button} from 'reactstrap';
+import "../styles/Home.css"
 
-const Home = () => {
+const Home = ({ user }) => {
     return (
         <div className="Home">
             <h1>Jobly</h1>
-            <button><Link to="/signup">Signup!</Link></button>
+            <p>A job search app!</p>
+            
+            {user ? <h2>Welcome Back {user.firstName}! </h2> : 
+                <div className="home-btns">
+                    <Button href="/signup"color="primary" className="signup-btn">Sign Up</Button>
+                    <Button href="/login"color="primary" className="login-btn">Login</Button>
+                </div>
+            }
         </div>
     )
 };

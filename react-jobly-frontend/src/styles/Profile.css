@@ -1,0 +1,35 @@
+.Profile{
+    background-color: white;
+    width: 60vw;
+
+    margin: 0 auto;
+    position: relative;
+    top: 5rem;
+    border-radius: 25px;
+}
+
+.Profile h1{
+    position: relative;
+    top: 30px;
+}
+
+.Profile form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.Profile form label{
+    align-self: baseline;
+}
+
+.Profile form input{
+    margin-bottom: 20px;
+}
+
+.Profile form button{
+    position: relative;
+    top: 20px;
+}

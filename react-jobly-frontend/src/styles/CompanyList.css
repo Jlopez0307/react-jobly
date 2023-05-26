@@ -5,3 +5,39 @@
     flex-direction: column;
     
 }
+
+.CompanyList div.list-cards{
+    position: relative;
+    top: 50px;
+    
+
+    max-height: 65vh;
+    overflow-y: auto;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.CompanyList div.list-cards a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+.CompanyList div.list-cards a:hover{
+    color: rgb(48, 143, 251);
+}
+
+.CompanyList div.list-cards::-webkit-scrollbar{
+    width: 10px;
+}
+
+.CompanyList div.list-cards::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+
+.CompanyList div.list-cards::-webkit-scrollbar-thumb {
+    background-color: #868686;
+    border-radius: 100px;
+  }

@@ -1,0 +1,49 @@
+.CompanyDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    top: 3rem;
+
+    margin: 0 auto;
+}
+
+.CompanyDetails div.details-header{
+    color: black;
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    align-self: baseline;
+    text-shadow: 2px 2px 2px rgb(187, 187, 187);
+
+}
+
+.CompanyDetails .list-cards {
+    width: 100%;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 65vh;
+
+}
+
+.CompanyDetails div.list-cards a:hover{
+    color: rgb(48, 143, 251);
+}
+
+.CompanyDetails div.list-cards::-webkit-scrollbar{
+    width: 10px;
+}
+
+.CompanyDetails div.list-cards::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+.CompanyDetails div.list-cards::-webkit-scrollbar-thumb {
+    background-color: #868686;
+    border-radius: 100px;
+}
+

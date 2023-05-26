@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import '../../styles/CompanyCard.css'
 import {
     Card,
     CardBody,
@@ -12,11 +14,7 @@ import {
 const CompanyCard = ({ description, handle, logoUrl, name, numEmployees }) => {
     return (
         <div className="CompanyCard">
-            <Card
-                style={{
-                    width: '18rem'
-                }}
-            >
+            <Card>
                 <CardBody>
                 <CardTitle tag="h5">
                     {name}
@@ -29,9 +27,8 @@ const CompanyCard = ({ description, handle, logoUrl, name, numEmployees }) => {
                 </CardSubtitle>
                 </CardBody>
                 <img
-                    alt="Card cap"
+                    alt=""
                     src={logoUrl}
-                    width="100%"
                 />
                 <CardBody>
                     <CardText>

@@ -1,0 +1,11 @@
+div.JobCard div.card {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+div.JobCard div.card div.card-body button.btn {
+    position: relative;
+    top: 1rem;
+}

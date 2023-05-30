@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import JoblyApi from "../../helpers/api";
 import JobSearchForm from "../Forms/JobSearchForm";
-import { Link } from 'react-router-dom';
 import JobCard from './JobCard';
 import '../../styles/JobList.css'
 import UserContext from "../../context/UserContext";

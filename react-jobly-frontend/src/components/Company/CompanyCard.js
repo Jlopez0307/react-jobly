@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import '../../styles/CompanyCard.css'
 import {
     Card,
@@ -7,7 +6,6 @@ import {
     CardTitle,
     CardSubtitle,
     CardText,
-    CardLink
 }
  from 'reactstrap'
 

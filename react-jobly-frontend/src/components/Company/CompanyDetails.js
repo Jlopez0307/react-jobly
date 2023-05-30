@@ -12,9 +12,6 @@ const CompanyDetails = () => {
     const routeParams = useParams();
     const [company, setCompany] = useState([]);
     const [jobs, setJobs] = useState([]);
-    const [applied, setApplied] = useState()
-    // console.log([...new Set(user.applications.filter(appId => jobId.includes(appId)))])
-    console.log(applied)
 
     useEffect(() => {
         const getCompany = async () => {

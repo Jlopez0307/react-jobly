@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
 import '../styles/Nav.css'
-import { Nav ,NavItem, NavLink, NavbarBrand } from 'reactstrap';
+import { Nav ,NavItem, NavLink } from 'reactstrap';
 
 const NavBar = ({ logout, user }) => {
 

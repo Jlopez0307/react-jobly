@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/JobCard.css'
 import {
     Card,
@@ -7,9 +6,7 @@ import {
     CardTitle,
     CardSubtitle,
     CardText,
-    CardLink,
     Button,
-    Form
 }
  from 'reactstrap'
 import UserContext from "../../context/UserContext";

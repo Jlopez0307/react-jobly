@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "postgresql://xvvfgpmw:C7eg6Mc-_yMqSx1g3EtvVY4w6xG82ebG@mahmud.db.elephantsql.com/xvvfgpmw";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "postgres://xvvfgpmw:C7eg6Mc-_yMqSx1g3EtvVY4w6xG82ebG@mahmud.db.elephantsql.com/xvvfgpmw";
 // BASE_URL was localhost://3001
 /** API Class.
  *

@@ -33,3 +33,21 @@
     position: relative;
     top: 20px;
 }
+
+p.status{
+    /* border: 1px solid red; */
+
+    width: 50%;
+    border-radius: 10px;
+    color: rgb(54, 54, 54)
+
+
+}
+
+p.error{
+    background-color: rgba(255, 0, 0, 0.481);
+}
+
+p.success{
+    background-color: rgba(122, 162, 61, 0.488);
+}

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom"
 import "../styles/Profile.css"
 import {
     Form,
@@ -11,7 +10,6 @@ import {
 
 
 const Profile = ({ user , update}) => {
-    const navigate = useNavigate();
     const INITIAL_STATE = {
         username: user.username,
         firstName: user.firstName,
@@ -20,7 +18,6 @@ const Profile = ({ user , update}) => {
     }
     
     const [formData, setFormData] = useState(INITIAL_STATE);
-    const [ visible, setVisible ] = useState(false);
     const [status, setStatus] = useState(null);
 
     const handleChange = e => {
@@ -39,7 +36,6 @@ const Profile = ({ user , update}) => {
             setStatus('Success!')
         }
         update({...formData})
-        setVisible(true);
     }
 
     return (

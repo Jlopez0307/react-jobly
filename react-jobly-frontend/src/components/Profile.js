@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom"
 import "../styles/Profile.css"
 import {
     Form,
@@ -11,7 +10,6 @@ import {
 
 
 const Profile = ({ user , update}) => {
-    const navigate = useNavigate();
     const INITIAL_STATE = {
         username: user.username,
         firstName: user.firstName,
@@ -20,6 +18,7 @@ const Profile = ({ user , update}) => {
     }
     
     const [formData, setFormData] = useState(INITIAL_STATE);
+    const [status, setStatus] = useState(null);
 
     const handleChange = e => {
         const { name, value } = e.target;
@@ -31,10 +30,14 @@ const Profile = ({ user , update}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+        if( !formData.firstName || !formData.lastName || !formData.email ){
+            setStatus('Please fill out all forms');
+        }else {
+            setStatus('Success!')
+        }
         update({...formData})
-        navigate("/")
     }
+
     return (
         <div className="Profile">
             <h1>Edit Profile</h1>
@@ -50,7 +53,9 @@ const Profile = ({ user , update}) => {
 
                 <Label htmlFor="email">Email:</Label>
                 <Input id="email" name="email" placeholder="Email" onChange={handleChange} value={formData.email}/>
-                
+
+                {status === 'Success!' ? <p className="status success">{status}</p> : <p className="status error">{status}</p>}
+
                 <Button color="success">Save Changes</Button>
             </Form>
         </div>

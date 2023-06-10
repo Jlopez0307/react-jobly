@@ -22,7 +22,7 @@ const JobCard = ({ id, title, salary, companyName, companyHandle, apply }) => {
     
     useEffect(() => {
         const checkApplied = () => {
-            // eslint-disable-line no-use-before-define
+            // eslint-disable-next-line
             user.applications.map(appId => {
                 if(appId === id){
                     setApplied(true);
